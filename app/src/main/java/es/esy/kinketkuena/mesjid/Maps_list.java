@@ -28,7 +28,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
     GoogleMap gMaps;
     String nama;
-    TextView namaP;
+
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
@@ -44,7 +44,7 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
     }
 
     public void setInfo(String place) {
-        if (place.equalsIgnoreCase("masjid jamik unsyiah")) {
+        if (place.equalsIgnoreCase("satu")) {
             try {
                 initializeMaps();
                 gMaps.addMarker(new MarkerOptions()
@@ -68,7 +68,7 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
                 gMaps.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 2000, null);
             } catch (Exception e) {
             }
-        } else if (place.equalsIgnoreCase("masjid polda")) {
+        } else if (place.equalsIgnoreCase("dua")) {
             try {
                 initializeMaps();
                 gMaps.addMarker(new MarkerOptions()
@@ -94,7 +94,7 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
             }
         } else {
         }
-        if (place.equalsIgnoreCase("masjid oman")) {
+        if (place.equalsIgnoreCase("tiga")) {
             try {
                 initializeMaps();
                 gMaps.addMarker(new MarkerOptions()
@@ -118,7 +118,7 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
                 gMaps.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 2000, null);
             } catch (Exception e) {
             }
-        } else if (place.equalsIgnoreCase("masjid raya")) {
+        } else if (place.equalsIgnoreCase("empat")) {
             try {
                 initializeMaps();
                 gMaps.addMarker(new MarkerOptions()
@@ -144,6 +144,57 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
             }
         } else {
         }
+        if (place.equalsIgnoreCase("lima")) {
+            try {
+                initializeMaps();
+                gMaps.addMarker(new MarkerOptions()
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic))
+                        .position(new LatLng(5.572934, 95.362081))
+                        .visible(true)
+                        .title("masjid putih"));
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                gMaps.setMyLocationEnabled(true);
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(5.484702, 95.227189)).zoom(10).build();
+                gMaps.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                gMaps.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 2000, null);
+            } catch (Exception e) {
+            }
+        } else if (place.equalsIgnoreCase("enam")) {
+            try {
+                initializeMaps();
+                gMaps.addMarker(new MarkerOptions()
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic))
+                        .position(new LatLng(5.568376, 95.381538))
+                        .visible(true)
+                        .title("masjid baitul halim (tungkop) "));
+                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                gMaps.setMyLocationEnabled(true);
+                CameraPosition cameraPosition = new CameraPosition.Builder().target(new LatLng(5.580425, 95.350300)).zoom(10).build();
+                gMaps.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+                gMaps.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition), 2000, null);
+            } catch (Exception e) {
+            }
+        } else {
+        }
+
     }
         public void rood(View view)
         {
@@ -166,5 +217,11 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
             gMaps.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+    }
+
+
+    public void home (View view){
+        Intent intent = new Intent(this, Menu_utama.class);
+        startActivity(intent);
     }
 }

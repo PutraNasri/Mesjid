@@ -22,42 +22,49 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/btn1"
-            android:text="Masjid Jamik Unsyiah" />
+            android:text="Masjid Jamik Unsyiah"
+            android:onClick="satu" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/btn1"
             android:id="@+id/btn2"
-            android:text="MASJID POLDA" />
+            android:text="MASJID POLDA"
+            android:onClick="dua" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/btn2"
             android:id="@+id/btn3"
-            android:text="MASJID OMAN" />
+            android:text="MASJID OMAN"
+            android:nestedScrollingEnabled="false"
+            android:onClick="tiga" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/btn3"
             android:id="@+id/btn4"
-            android:text="MASJID RAYA BAITURRAHMAN" />
+            android:text="MASJID RAYA BAITURRAHMAN"
+            android:onClick="empat" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/btn4"
             android:id="@+id/btn5"
-            android:text="MASJID PUTIH" />
+            android:text="MASJID PUTIH"
+            android:onClick="lima" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/btn5"
             android:id="@+id/btn6"
-            android:text="MASJID BAITUL HALIM " />
+            android:text="MASJID BAITUL HALIM "
+            android:onClick="enam" />
 
         <Button
             android:layout_width="match_parent"
