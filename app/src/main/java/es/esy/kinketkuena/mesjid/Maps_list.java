@@ -44,6 +44,7 @@ public class Maps_list extends ActionBarActivity implements OnMapReadyCallback {
     }
 
     public void setInfo(String place) {
+
         if (place.equalsIgnoreCase("satu")) {
             try {
                 initializeMaps();

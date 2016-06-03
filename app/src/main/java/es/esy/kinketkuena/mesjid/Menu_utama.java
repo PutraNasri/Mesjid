@@ -17,7 +17,7 @@ public class Menu_utama extends AppCompatActivity {
         startActivity(intent);
     }
     public void list(View view){
-        Intent intent = new Intent(this, List.class);
+        Intent intent = new Intent(this, list_pillih.class);
         startActivity(intent);
     }
 

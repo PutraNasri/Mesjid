@@ -31,7 +31,8 @@
 
         <activity android:name=".Maps_list" />
         <activity android:name=".Maps" />
-        <activity android:name=".List"></activity>
+        <activity android:name=".List" />
+        <activity android:name=".list_pillih" />
     </application>
 
 </manifest>
